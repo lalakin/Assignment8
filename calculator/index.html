@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 2 - Calculator III</title>
+<!--	<script src = "script.js"></script>-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+
+	$(document).ready(function() {
+//		$("#Btn").click(function(event) {
+//	alert("Hi!");
+//});
+
+//		$("#Btn2").bind("click", function(event) {
+//			alert("Hi!");
+//		});
+		
+//	$("#Btn3").on("click", function(event) {
+//		alert("Hi!");
+//	});	
+		
+//	$("body").on({
+//		click: function(event) {
+//			alert("Hi!");
+//		}
+//	}, "button");
+		
+//	$("#myDiv").css("width", 400);
+//	$("#myDiv").css("height", 400);
+//	$("#myDiv").css("border", "solid black 1px");	
+//	$("#myDiv").on({
+//		mouseenter: function() {alert("Hovered over the div!");},
+//		mouseleave: function() {alert("The mouse left the div!");},
+//		click: function() {alert("You clicked on the div!");}
+//	
+//	});	
+	
+//	$("#myDiv").css("width", 400);
+//	$("#myDiv").css("height", 400);
+//	$("#myDiv").css("border", "solid black 1px");	
+//	$("#myDiv").on({
+//		mouseenter: function() {$("span").append("Hovered over the div!");},
+//		mouseleave: function() {$("span").append("The mouse left the div!");},
+//		click: function() {$("span").append("You clicked on the div!");}
+//	
+//	});			
+	
+//	$("a").on("click", function(e) {
+//		e.preventDefault();
+//		$(this).css("color", "#CC1C0D");
+//		alert(e.target.nodeName);
+//	});
+		
+//	$(window).resize(function() {
+//		$("#myDiv2").text($(window).width());
+//		$("#myDiv2").text($(window).height());
+//	});
+	
+//	$("#myInput").focusin(function() {
+//		$(this).css("background-color", "#cccccc");
+//	});	
+//	$("#myInput").focusout(function() {
+//		$(this).css("background-color", "#ffffff");
+//	});		
+	
+//----------------------------------------------Form---------------
+			$("form").submit(function(e) {
+		if($("#myName").val() === "" || $("#myEmail").val() === "") {
+			alert("Both fields are required!");
+			$("#myName").css("border", "solid red 1px");
+			$("#myEmail").css("border", "solid red 1px");
+			e.preventDefault();
+			
+			}if ($("#myName").val() !== "") {
+				$("#myName").css("border", "solid green 1px");
+				}
+
+			if ($("#myEmail").val() !== "") {
+				$("#myEmail").css("border", "solid green 1px");
+			};
+
+		
+	});
+//-------------------------------------------	
+
+	
+//CALCULATOR
+		
+$("input[type=button]").addClass("buttons");
+$(".buttons").css("width", "60px")
+.css("height", "60px")
+.css("margin", "1px")
+.css("background-color", "#A4D8EB")
+.css("border", "solid #626D70 2px")
+.css("border-radius", "5px")
+.css("font-size", "18px")
+
+$("#result").css("background-color", "#C3F2B1")
+.css("width", "255px")
+.css("height", "45px")
+.css("margin", "2px")
+.css("border", "solid #B0B5AE 2px")
+.css("border-radius", "5px")
+.css("font-size", "30px")
+.css("font-color", "#4E5454")
+
+$("#container").on("click", "input[type=button]", function() {
+	var v = $(this).val();
+	$("#result").val($("#result").val() + v);
+	$("#equal").on("click", function() {
+	$("#result").val(eval($("#result").val()));
+});
+});
+
+//-----------------------------------End Calculator	
+	});
+	</script>
+</head>
+
+<body>
+	<input type="text" readonly id="result">
+    <br>
+    <div id="container">
+        <input type="button" id="seven" value="7">
+        <input type="button" id="eight" value="8">
+        <input type="button" id="nine" value="9">
+        <input type="button" id="divide" value="/">
+        <br>
+        <input type="button" id="four" value="4">
+        <input type="button" id="five" value="5">
+        <input type="button" id="six" value="6">
+        <input type="button" id="multiply" value="*">
+        <br>
+        <input type="button" id="one" value="1">
+        <input type="button" id="two" value="2">
+        <input type="button" id="three" value="3">
+        <input type="button" id="subtract" value="-">
+        <br>
+        <input type="button" id="zero" value="0">
+        <input type="button" id="period" value=".">
+        <input type="button" id="add" value="+">
+    </div>
+    <input type="button" id="equal" value="="><br><br>
+	
+<!--	<button id="Btn">Click</button>-->
+<!--	<button id="Btn2">Click2</button>-->
+<!--	<button id="Btn3">Click3</button>-->
+<!--
+<button input type="button" id="Btn4">Click4</button>
+	<button input type="button" id="Btn5">Click5</button>
+-->
+<!--
+	<div id ="myDiv">
+		<span></span>
+		</div>
+-->
+<!--	<a href ='http://www.google.com'>Google</a>-->
+<!--	<div id="myDiv2"></div>-->
+<!--	Input: <input type= "text" id="myInput">-->
+<!--
+	<form>
+		Name: <input type= "text" id="myName" name= "Name"><br><br>
+		Email: <input type= "email" id="myEmail" name= "Email"><br><br>
+		<button id= "myButton" type = "submit">Submit</button>
+	</form>
+-->
+</body>
+</html>

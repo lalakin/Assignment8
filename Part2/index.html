@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 2 - Part II</title>
+	<link rel = "stylesheet" href="styles.css">
+<!--	<script src = "script.js"></script>-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!--	<link rel="stylesheet" href = "jquery-ui-1.12.1.custom/jquery-ui.css">-->
+	<script>
+
+	$(document).ready(function() {
+		$( function() {
+			var icons = {
+				header: "ui-icon-circle-plus",
+      			activeHeader: "ui-icon-circle-minus"
+				
+			};
+			
+    $( "#accordion" ).accordion ({
+		icons: icons
+	});
+  });
+	
+$( "#accordion" ).accordion({
+	header: "h3",
+	 
+});
+$("#accordion h3").addClass("activeHeader");
+$(".activeHeader").css("border", "1px solid #F21D2B");
+$(".activeHeader").css("background-color", "#F05962");
+$(".activeHeader").css("font-weight", "bold");
+$(".activeHeader").css("border-radius", "10px")
+
+$("#accordion").addClass("subtitle");
+$(".subtitle").css("background-color", "#F5B3BE");		
+$(".subtitle").css("border", "1px solid #F5B3BE");		
+$(".subtitle").css("border-bottom-right-radius", "");	
+$(".subtitle").css("border-bottom-left-radius", "");		
+$(".subtitle").css("margin-left", "0px");
+		
+//-------------Tabs-------------------------------		
+//		$( function() {
+//    $( "#tabs" ).tabs();
+//  } );
+//		$("ul").css("background-color", "#91B4CC");
+//		$("ul li a").addClass("navigation");
+//		$(".navigation").css("background-color", "#F57B47");
+//		$(".navigation").css("border-top-right-radius", "9px");
+//		$("#tabs-1, #tabs-2, #tabs-3").css("background-color", "#DFE9F0");
+
+//--------------Slide Show--------------------------		
+
+//	$("#myDiv").css("width", 421);
+//	$("#myDiv").css("height", 300);
+//	$("#myDiv").css("border", "solid black 1px");
+//
+//$("#btn1").on("click", function() {
+//	//$("#myDiv").append("<img src = moscow/kremlin_web2.png>");
+//		$("#btn1").css("color", "#CC1C0D");
+//		$("#slide1").fadeIn(1000);
+//	});
+//		
+//$("#btn2").on("click", function() {		
+//	$("#btn1").css("color", "");
+//	$("#btn2").css("color", "#CC1C0D");
+//	$("#slide1").hide();
+//	$("#slide2").fadeIn(1000);
+//	});	
+//		
+//$("#btn3").on("click", function() {
+//	$("#btn1").css("color", "");
+//	$("#btn2").css("color", "");
+//	$("#btn3").css("color", "#CC1C0D");
+//	$("#slide2").hide();
+//	$("#slide3").fadeIn(1000);
+//	});
+//$("#btn4").on("click", function() {
+//	$("#btn1").css("color", "");
+//	$("#btn2").css("color", "");
+//	$("#btn3").css("color", "");
+//	$("#btn4").css("color", "#CC1C0D");
+//	$("#slide3").hide();
+//	$("#slide4").fadeIn(1000);
+//	});
+//$("#btn5").on("click", function() {
+//	$("#btn1").css("color", "");
+//	$("#btn2").css("color", "");
+//	$("#btn3").css("color", "");
+//	$("#btn4").css("color", "");
+//	$("#btn5").css("color", "#CC1C0D");
+//	$("#slide4").hide();
+//	$("#slide5").fadeIn(1000);
+//	});		
+		
+
+	});	
+	</script>
+</head>
+
+<body>
+<!--
+<h1>Moscow Slide Show</h1>
+
+	<div id="myDiv">
+	<div id="slides">
+		<img  id ="slide1" src = "moscow/kremlin_web2.png" alt="Kremlin">
+		<img id ="slide2" src = "moscow/istormus_web2.png" alt="Historical Museum">
+		<img id ="slide3" src = "moscow/bolshoy_web2.png" alt="Bolshoi Theater">
+		<img id ="slide4" src = "moscow/dvorec_web2.png" alt="The Palace">
+		<img id ="slide5" src = "moscow/mgu_web2.png" alt="University">
+	</div>
+		</div><br>
+	<div id= "buttons">
+
+		<button id = "btn1">1</button>
+		<button id = "btn2">2</button>
+		<button id = "btn3">3</button>
+		<button id = "btn4">4</button>
+		<button id = "btn5">5</button>
+	</div>
+-->
+<!--
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Nunc tincidunt</a></li>
+    <li><a href="#tabs-2">Proin dolor</a></li>
+    <li><a href="#tabs-3">Aenean lacinia</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+  </div>
+  <div id="tabs-2">
+    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+  </div>
+  <div id="tabs-3">
+    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+  </div>
+</div>	
+-->
+<!--
+<div id="accordion">
+  <h3>Section 1</h3>
+
+  <div>
+	<div>
+		 <h3 class="subtitle">Subtitle</h3>
+	  </div> 
+    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+	  <div>
+		 <h3 class="subtitle">Subtitle</h3>
+	  </div> 
+    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+  </div>
+  <h3>Section 3</h3>
+  <div>
+	  <div>
+		 <h3 class="subtitle">Subtitle</h3>
+	  </div> 
+    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  <h3>Section 4</h3>
+  <div>
+	  <div>
+		 <h3 class="subtitle">Subtitle</h3>
+	  </div> 
+    <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+  </div>
+</div>
+-->
+ 
+
+
+	
+</body>
+</html>

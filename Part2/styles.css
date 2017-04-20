@@ -1,0 +1,9 @@
+img {
+	height: 300px;
+}
+#slides img {
+	display: none;
+}
+#slide1 {
+	display: none;
+}
